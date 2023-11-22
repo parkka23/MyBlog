@@ -1,0 +1,118 @@
+{% extends 'partials/base.html' %}
+{% block title %}Home Page{% endblock %}
+{% load crispy_forms_tags %}
+{% block content %}
+{%load i18n%}
+<style>
+    .gradient-button {
+  text-decoration: none;
+  display: inline-block;
+  color: white;
+  padding: 10px 15px;
+  margin: 10px 0px;
+  border-radius: 10px;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background-image: linear-gradient(to right, #9EEFE1 0%, #4830F0 51%, #9EEFE1 100%);
+  background-size: 200% auto;
+  box-shadow: 0 0 20px rgba(0, 0, 0, .1);
+  transition: .5s;
+}
+.gradient-button:hover {
+  background-position: right center;
+  }
+  .custom-button {
+  text-decoration: none;
+  display: inline-block;
+  color: white;
+  padding: 6px 8px;
+  margin: 10px 15px;
+  border-radius: 10px;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background-image: linear-gradient(to right, #e851c7 0%, #f5e647 51%, #e851c7 100%);
+  background-size: 200% auto;
+  box-shadow: 0 0 20px rgba(0, 0, 0, .1);
+  transition: .5s;
+}
+.custom-button:hover {
+  background-position: right center;
+}
+
+
+
+
+</style>
+<div class="container" >
+    <div class="row mt-5 pt-3 ">
+        <div class="col-md-4">
+            <div class="card my-3 shadow">
+                <div class="card-body">
+
+                    <form method="POST">
+                        {% csrf_token %}
+                        {{ form|crispy }}
+                        <input class="btn gradient-button btn-block" style="" type="submit" value="{% trans 'Post' %}">
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-8">
+            <form method="GET" class="category-filter-form">
+                <div class="form-inline">
+                    <div class="form-group">
+                        <select id="category-filter" name="category" class="form-control" style="width: 450px;">
+                            <option value="">{% trans 'All Categories' %}</option>
+                            {% for category in categories %}
+                           <option value="{{ category.slug }}" {% if category.slug == category_filter %}selected{% endif %}>
+    {{ category.name }}
+</option>
+
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <button type="submit" class="btn custom-button" style="width: auto;">{% trans 'Apply Filter' %}</button>
+                </div>
+            </form>
+
+
+            <form method="GET" class="search-form">
+                <div class="d-flex align-items-center">
+                    <input type="text" name="q" placeholder="{% trans 'Search by title' %}"
+                           class="form-control" style="width: 450px;">
+                    <div class="input-group-append">
+                        <button type="submit" class="btn custom-button btn-block">{% trans 'Search' %}</button>
+                    </div>
+                </div>
+            </form>
+
+
+            {% for post in posts %}
+            <div class="card shadow my-3">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <img class="img-thumbnail" src="{{ post.author.profilemodel.image.url }}" alt="img">
+                        </div>
+                        <div class="col-md-8">
+                            <small style="color:red;">{{ post.author }}</small>
+                            <small>{{ post.category }}</small>
+                            <small>{{ post.date_created }}</small>
+                            <hr>
+                            <a class="h3" href="{% url 'blog-post-detail' post.id %}">{{ post.title }}</a>
+                            <p class="text-justify my-3">
+                                {{ post.content }}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}

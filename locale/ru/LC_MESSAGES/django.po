@@ -1,0 +1,221 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-11-22 00:16+0600\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
+"%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: .\blog\forms.py:9 .\blog\forms.py:29 .\blog\forms.py:36
+msgid "Content"
+msgstr "Содержание"
+
+#: .\blog\forms.py:10
+msgid "Select a category"
+msgstr "Выберите категори"
+
+#: .\blog\forms.py:10 .\blog\forms.py:30
+msgid "Category"
+msgstr "Категория"
+
+#: .\blog\forms.py:16 .\blog\forms.py:28
+msgid "Title"
+msgstr "Название"
+
+#: .\blog\forms.py:36
+#, fuzzy
+#| msgid "Add comment here..."
+msgid "Add comment here...."
+msgstr "Добавить комментарий..."
+
+#: .\blogska\settings.py:161
+msgid "Russian"
+msgstr "Русский"
+
+#: .\blogska\settings.py:162
+msgid "English"
+msgstr "English"
+
+#: .\templates\blog\index.html:57
+msgid "Post"
+msgstr "Опубликовать"
+
+#: .\templates\blog\index.html:69
+msgid "All Categories"
+msgstr "Все категории"
+
+#: .\templates\blog\index.html:78
+msgid "Apply Filter"
+msgstr "Применить фильтр"
+
+#: .\templates\blog\index.html:85
+msgid "Search by title"
+msgstr "Искать по названию"
+
+#: .\templates\blog\index.html:88
+msgid "Search"
+msgstr "Поиск"
+
+#: .\templates\blog\post_delete.html:13
+msgid "Do you want to delete post?"
+msgstr "Вы хотите удалить пост?"
+
+#: .\templates\blog\post_delete.html:17 .\templates\users\profile.html:88
+msgid "Cancel"
+msgstr "Отмена"
+
+#: .\templates\blog\post_delete.html:18
+msgid "Confirm"
+msgstr "Подтвердить"
+
+#: .\templates\blog\post_detail.html:44
+msgid "Delete"
+msgstr "Удалить"
+
+#: .\templates\blog\post_detail.html:46
+msgid "Edit"
+msgstr "Редактировать"
+
+#: .\templates\blog\post_detail.html:81
+msgid "Comment"
+msgstr "Комментировать"
+
+#: .\templates\blog\post_edit.html:15 .\templates\users\profile.html:89
+msgid "Save"
+msgstr "Сохранить"
+
+#: .\templates\partials\nav.html:25
+msgid "Go"
+msgstr "Применить"
+
+#: .\templates\partials\nav.html:37
+msgid "Profile"
+msgstr "Профиль"
+
+#: .\templates\partials\nav.html:41
+msgid "Logout"
+msgstr "Выход"
+
+#: .\templates\partials\nav.html:47 .\templates\users\sign_up.html:18
+msgid "Sign Up"
+msgstr "Регистрация"
+
+#: .\templates\partials\nav.html:51 .\templates\users\login.html:47
+#: .\templates\users\logout.html:17
+#: .\templates\users\password_reset_complete.html:17
+msgid "Login"
+msgstr "Вход"
+
+#: .\templates\users\login.html:42
+msgid "Login Page"
+msgstr "Страница Входа"
+
+#: .\templates\users\login.html:51
+msgid "Forgot Password?"
+msgstr "Забыли пароль?"
+
+#: .\templates\users\login.html:55
+msgid "Create An Account"
+msgstr "Создать аккаунт"
+
+#: .\templates\users\logout.html:12
+msgid "Logout Page"
+msgstr "Страница выхода"
+
+#: .\templates\users\logout.html:15
+msgid "You have been logged out."
+msgstr "Вы вышли из системы."
+
+#: .\templates\users\password_reset.html:12
+msgid "Password Reset Page"
+msgstr "Страница сброса пароля"
+
+#: .\templates\users\password_reset.html:15
+msgid "Enter email and a mail will be sent with instructions to reset password"
+msgstr ""
+"Введите свой адрес электронной почты, и будет отправлено письмо с "
+"инструкцией по сбросу пароля."
+
+#: .\templates\users\password_reset.html:20
+msgid "Reset Password"
+msgstr "Сбросить пароль"
+
+#: .\templates\users\password_reset_complete.html:12
+msgid "Password Reset Complete Page"
+msgstr "Страница завершения сброса пароля"
+
+#: .\templates\users\password_reset_complete.html:15
+msgid "Your password reset is successful. Log in with new credentials."
+msgstr ""
+"Ваш пароль успешно восстановлен. Войдите в систему с новыми учетными данными."
+
+#: .\templates\users\password_reset_confirm.html:12
+msgid "Password Reset Confirm Page"
+msgstr "Страница подтверждения сброса пароля"
+
+#: .\templates\users\password_reset_confirm.html:17
+msgid "Reset Password Confirm"
+msgstr "Сбросить пароль"
+
+#: .\templates\users\password_reset_done.html:12
+msgid "Password Reset Done Page"
+msgstr "Страница сброса пароля"
+
+#: .\templates\users\password_reset_done.html:15
+msgid ""
+"An mail with instructions to reset password has been sent to the email you "
+"provided."
+msgstr ""
+"На указанный вами адрес электронной почты было отправлено электронное письмо "
+"с инструкциями по сбросу пароля."
+
+#: .\templates\users\profile.html:34
+msgid "Profile Page"
+msgstr "Страница профиля"
+
+#: .\templates\users\profile.html:39
+msgid "Edit Profile"
+msgstr "Редактировать профиль"
+
+#: .\templates\users\profile.html:53
+msgid "Name:"
+msgstr "Имя:"
+
+#: .\templates\users\profile.html:54
+msgid "Email:"
+msgstr "Почта:"
+
+#: .\templates\users\profile.html:71
+msgid "Edit Profile Information"
+msgstr "Редактировать информацию профиля"
+
+#: .\templates\users\sign_up.html:13
+msgid "Sign Up Page"
+msgstr "Регистрация"
+
+#: .\users\forms.py:39
+msgid "Image"
+msgstr "Изображение"
+
+#~ msgid "Title Translation"
+#~ msgstr "Название"
+
+#~ msgid "Content Translation"
+#~ msgstr "Содержание"
+
+#~ msgid "Category Translation"
+#~ msgstr "Категория"

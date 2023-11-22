@@ -1,0 +1,22 @@
+{% extends 'partials/base.html' %}
+{% block title %}Post Edit Page{% endblock %}
+{% load crispy_forms_tags %}
+{% block content %}
+{%load i18n%}
+
+<div class="container">
+    <div class="row mt-5 pt-3">
+        <div class="col-md-8 offset-md-2">
+            <div class="card my-3 shadow">
+                <div class="card-body">
+                    <form method="POST">
+                        {% csrf_token %}
+                        {{ form|crispy }}
+                        <input class="btn btn-outline-info btn-md" type="submit" value="{% trans 'Save' %}">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
